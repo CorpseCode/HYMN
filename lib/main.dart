@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hymusic/Screens/screens.dart';
 import 'package:get/get.dart';
-import 'package:hymusic/Screens/search.dart';
+import 'package:hymusic/Screens/song_screen.dart';
 
 import 'Screens/home_screen.dart';
 import 'Screens/playlist_screen.dart';
@@ -17,14 +17,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(
+          fontFamily: 'Montserrat',
           bodyColor: Colors.white70,
           displayColor: Colors.white70,
         ),
       ),
-      home: Home(),
+      initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => Home () ),
-        GetPage(name: '/search', page: () => Search () ),
+        GetPage(name: '/song', page: () => Songs () ),
         GetPage(name: '/playlist', page: () => Playlist () )
       ],
     );
